@@ -1,0 +1,85 @@
+*{
+    margin: 0px;
+    padding:0px;
+    font-family: "Edu NSW ACT Foundation", cursive;
+  font-optical-sizing: auto;
+}
+.container{
+    max-width: 80%;
+    padding: 34px;
+    margin: auto;
+}
+.container h1, p{
+    font-size: 40px;
+     text-align: center;
+     text-decoration-color: white;
+     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+p{
+    font-size: 30px;
+    color:black;
+     text-align: center;
+     text-decoration-color: white;
+     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+input, textarea{
+    display: block;
+    border: 2px solid black;
+    border-radius: 6px;
+    outline: none;
+    font-size: 20px;
+    width: 80%;
+    margin: 11px 0px;
+    padding: 7px;
+
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+
+}
+.btn{
+    font-size: 24px;
+    background-color: blue;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.30);
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.btn span{
+    position: relative;
+    z-index: 1;
+}
+.btn::before{
+    content:"";
+    position: absolute;
+    background-color:rgb(16, 8, 104);
+    width: 0px;
+    height: 0px;
+    left:var(--xPos);
+    top:var(--yPos);
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    transition: width .5s, height 0.5s;
+
+}
+.btn:hover:before{
+    width: 250px;
+    height: 250px;
+}
+.bg{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.7;
+}
+.sumbitmsg{
+    color: red;
+    text-shadow: 50px;
+    font-size: 20px;
+}
